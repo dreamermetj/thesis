@@ -3,16 +3,16 @@
 sortTypes = ['1234','1324','1423','2341','2413','3412']
 
 extractPairs = [
+  ['123','1234'],
+  ['124','1423'],
+  ['134','3412'],
+  ['234','2341'],
   ['12','1234'],
   ['13','1324'],
   ['14','1423'],
   ['23','2341'],
   ['24','2413'],
-  ['34','3412'],
-  ['123','1234'],
-  ['124','1423'],
-  ['134','3412'],
-  ['234','2341']
+  ['34','3412']
 ]
 
 #mode: eg. '13', '24'
@@ -24,6 +24,21 @@ def is_same(w1, w2, mode):
 
 #input: a word list file with the mode we want to use to extract
 #return: a dict maps constructions to their instance groups
+#data structure:
+# dict(mode)
+#  |
+#  |- construction 1
+#  |       |- instance 1
+#  |       |- instance 2
+#  |       |- ...
+#  |
+#  |- construction 2
+#  |       |- ...
+#  |
+#  |- ...
+#  |
+#  |- construction n
+#          |- ...
 def extract_construction_with_instances(inf, mode):
   print "processing inf: " + inf + " using mode: " + mode + " ..."
   f = open(inf,"rb")
