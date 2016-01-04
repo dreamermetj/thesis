@@ -1,2 +1,13 @@
 1. 多级筛选，先取三字，再取二字。
 2. 可以研究一下双字交替的情况（eg. 还珠买椟 v.s. 买椟还珠）
+3. 定量研究remark1的情况
+
+remark:
+1. drop_uni_slot_from_bi_slot
+  …一…子
+    before trim: 下一钩子，前一阵子，挂一鈎子，挂一钩子
+    after trim (still remain in dict): 前一阵子
+    because: X一钩子 and 挂一X子
+
+  comment: 可以有效筛除bi_slot中的错别字现象
+  suggest: trim后如果不足2个实例也应删除
