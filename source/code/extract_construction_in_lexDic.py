@@ -108,10 +108,70 @@ def print_dict_to_html(dic, filename):
   f.write('</tbody></table></body></html>')
   f.close()
 
+def stat_dict(dic, outFp, print_construction=False, thold=False):
+  mode_list = []
+  if print_construction:
+    construction_list = []
+  for mode in dic:
+    ls = [mode, 0, []] #ls[1]: construction, ls[2]: instance
+    for construction in dic[mode]:
+      cnum = len(dic[mode][construction])
+      if thold and cnum < thold:
+        continue
+      ls[1] += 1
+      ls[2].append(cnum)
+      if print_construction:
+        construction_list.append([mode, construction, cnum])
+    sorted_amount = sorted(ls[2],reverse=True)
+    amount_str = ''
+    same_amount = 1
+    amount = sorted_amount[0]
+    total = 0
+    for i in range(1,len(sorted_amount)):
+      if sorted_amount[i] == amount:
+        same_amount += 1
+      else:
+        if same_amount > 1:
+          amount_str += str(amount) + '×' + str(same_amount) + ' + '
+        else:
+          amount_str += str(amount) + ' + '
+        total += amount * same_amount
+        same_amount = 1
+        amount = sorted_amount[i]
+    total += amount * same_amount
+    if same_amount > 1:
+      amount_str = str(total) + ' (' + amount_str + str(amount) + '×' + str(same_amount) + ')'
+    else:
+      amount_str = str(total) + ' (' + amount_str + str(amount) + ')'
+    ls[2] = amount_str
+    mode_list.append(ls)
+  f = open(outFp, 'wb')
+  f.write('*'*32+'\n')
+  f.write('1. MODE\n')
+  f.write('*'*32+'\n')
+  f.write('mode\tcnum\tinum\n')
+  for i in mode_list:
+    f.write(i[0]+'\t'+str(i[1])+'\t'+i[2]+'\n')
+  if print_construction:
+    construction_list = sorted(construction_list,key=lambda x:x[2], reverse=True)
+    f.write('\n'+'*'*32+'\n')
+    f.write('1. MODE\n')
+    f.write('*'*32+'\n')
+    f.write('mode\tcform\t\tinum\n')
+    for i in construction_list:
+      f.write(i[0]+'\t'+i[1].encode('utf-8')+'\t'+str(i[2])+'\n')
+  f.close()
+
 d = extract_construction_by_diff_modes("../lexDic/union/")
-print_dict_to_html('full_result.html')
+print ('start stat full dict ...')
+#stat_dict(d, '../extracted/lex/full_result_stat.txt')
+print ('start drop uni slot ...')
 drop_uni_slot_from_bi_slot(d)
-print_dict_to_html('trimmed_result.html')
+print ('start stat trimmed dict ...')
+#stat_dict(d, '../extracted/lex/trimmed_result_stat.txt')
+print ('start stat trimmed dict with threshold ...')
+stat_dict(d, '../extracted/lex/trimmed_with_threshold_result_stat.txt', print_construction=True, thold=3)
+
 
 
 
