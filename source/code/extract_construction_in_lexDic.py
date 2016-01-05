@@ -155,7 +155,7 @@ def stat_dict(dic, outFp, print_construction=False, thold=False):
   if print_construction:
     construction_list = sorted(construction_list,key=lambda x:x[2], reverse=True)
     f.write('\n'+'*'*32+'\n')
-    f.write('1. MODE\n')
+    f.write('2. CONSTRUCTION\n')
     f.write('*'*32+'\n')
     f.write('mode\tcform\t\tinum\n')
     for i in construction_list:
@@ -164,11 +164,11 @@ def stat_dict(dic, outFp, print_construction=False, thold=False):
 
 d = extract_construction_by_diff_modes("../lexDic/union/")
 print ('start stat full dict ...')
-#stat_dict(d, '../extracted/lex/full_result_stat.txt')
+stat_dict(d, '../extracted/lex/full_result_stat.txt')
 print ('start drop uni slot ...')
 drop_uni_slot_from_bi_slot(d)
 print ('start stat trimmed dict ...')
-#stat_dict(d, '../extracted/lex/trimmed_result_stat.txt')
+stat_dict(d, '../extracted/lex/trimmed_result_stat.txt')
 print ('start stat trimmed dict with threshold ...')
 stat_dict(d, '../extracted/lex/trimmed_with_threshold_result_stat.txt', print_construction=True, thold=3)
 
