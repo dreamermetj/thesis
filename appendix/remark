@@ -12,3 +12,4 @@ remark:
 
   comment: 可以有效筛除bi_slot中的错别字现象
   suggest: trim后如果不足2个实例也应删除
+  suggest[new]: threshold不靠谱，靠谱的是用分词判断有没有复合词的方式
