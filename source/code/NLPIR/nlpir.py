@@ -23,19 +23,6 @@ class POSMap:
     PKU_POS_MAP_SECOND  = 2 #北大二级标注集
     PKU_POS_MAP_FIRST   = 3	#北大一级标注集
 
-
-class SegAtom(Structure):
-    _fields_ = [("start", c_int32), ("length", c_int32),
-        ("sPOS", c_char * 40),      ("iPOS", c_int32),
-        ("word_ID", c_int32),       ("word_type", c_int32), ("weight", c_int32)
-    ]
-
-def translatePOS(sPOS):
-    global POS
-    if sPOS=='url': sPOS = 'xu'
-    c = sPOS[0]
-    return POS[c][sPOS]
-
 Init = loadFun('NLPIR_Init',c_int, [c_char_p, c_int, c_char_p])
 Exit = loadFun('NLPIR_Exit',c_bool, None)
 ParagraphProcess = loadFun('NLPIR_ParagraphProcess',c_char_p, [c_char_p, c_int])
