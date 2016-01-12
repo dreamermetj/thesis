@@ -1,4 +1,5 @@
 #coding:utf-8
+import json
 
 sortTypes = ['1234','1324','1423','2341','2413','3412']
 
@@ -162,26 +163,21 @@ def stat_dict(dic, outFp, print_construction=False, thold=False):
       f.write(i[0]+'\t'+i[1].encode('utf-8')+'\t'+str(i[2])+'\n')
   f.close()
 
-def basicWordFilter(dic):
-  wordList = t.strip().split('\n')
-  for mode in ['12','23','34','123','124','134','234']:
-    for construction in dic[mode].keys():
-      for word in wordList:
-        if word in construction:
-          del dic[mode][construction]
-          break
-
 d = extract_construction_by_diff_modes("../lexDic/union/")
 print ('start stat full dict ...')
+f = open('../extracted/json/full_dict','w')
+f.write(json.dumps(d))
+f.close()
 #stat_dict(d, '../extracted/lex/full_result_stat.txt')
 print ('start drop uni slot ...')
 drop_uni_slot_from_bi_slot(d)
 print ('start stat trimmed dict ...')
+f = open('../extracted/json/trimmed_dict','w')
+f.write(json.dumps(d))
+f.close()
 #stat_dict(d, '../extracted/lex/trimmed_result_stat.txt')
 #print ('start stat trimmed dict with threshold ...')
 #stat_dict(d, '../extracted/lex/trimmed_with_threshold_result_stat.txt', print_construction=True, thold=3)
-print ('start basic word filtering ...')
-basicWordFilter(d)
 stat_dict(d, '../extracted/lex/no_basic_word_result_stat.txt')
 
 
