@@ -16,3 +16,9 @@ remark:
   comment: 可以有效筛除bi_slot中的错别字现象
   suggest: trim后如果不足2个实例也应删除
   suggest[new]: threshold不靠谱，靠谱的是用分词判断有没有复合词的方式
+
+2. find_transformation.py
+  找到前后两字互换的例子。
+
+  comment1: 变换还有一种例如“千山万水”v.s.“千水万山”，但这种能够抽取出相同构式的可以不在此研究。
+  comment2: 有些错例，如“一目十行, 十目一行”；有些不对等，如“一夫多妻, 一妻多夫”；

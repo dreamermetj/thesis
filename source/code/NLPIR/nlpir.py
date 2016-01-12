@@ -30,7 +30,7 @@ ParagraphProcess = loadFun('NLPIR_ParagraphProcess',c_char_p, [c_char_p, c_int])
 if not Init('',ENCODING.UTF8_CODE,''):
     print("Initialization failed!")
     exit(-111111)
-
+'''
 f = open('wordlist.txt', 'rb')
 t = f.read()
 f.close()
@@ -40,7 +40,11 @@ for i in t.split('\n'):
     if len(seg.strip().split(' ')) == 1:
         f.write(i+'\n')
 f.close()
-
+'''
+t = '…不定'
+r = '…左…右'
+print ParagraphProcess(t, c_int(1))
+print ParagraphProcess(r, c_int(1))
 
 
 
