@@ -4,7 +4,7 @@ f = open('../extracted/json/full_dict')
 d = json.loads(f.read())
 f.close()
 simD = dict()
-ITER = 3
+ITER = 4
 for mode in ['123','124','134','234']:
     for construction in d[mode]:
         cc = len(d[mode][construction])
@@ -26,6 +26,8 @@ f = open('../extracted/similarity.txt','wb')
 for i in s:
     f.write(i[0].encode('utf-8'))
     for j in range(ITER):
+        if j:
+            i[1][j] += i[1][j-1]
         f.write('\t'+str(i[1][j]))
     f.write('\n')
 f.close()

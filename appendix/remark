@@ -26,4 +26,5 @@ remark:
 3. similarity.py
   找到uni_slot中的不同字
 
-  suggest: 用多表统计不同阈值的高频字组的增幅
+  suggest: 用多表统计不同阈值的高频字组的增幅 done
+  comment: 增幅显著减小说明二元组是发生误写最高频的地方。

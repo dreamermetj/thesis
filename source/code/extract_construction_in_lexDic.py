@@ -111,6 +111,7 @@ def print_dict_to_html(dic, filename):
 
 def stat_dict(dic, outFp, print_construction=False, thold=False):
   mode_list = []
+  dt = {}
   if print_construction:
     construction_list = []
   for mode in dic:
@@ -128,6 +129,7 @@ def stat_dict(dic, outFp, print_construction=False, thold=False):
     same_amount = 1
     amount = sorted_amount[0]
     total = 0
+    lt = [0 for i in range(13)]
     for i in range(1,len(sorted_amount)):
       if sorted_amount[i] == amount:
         same_amount += 1
@@ -137,6 +139,8 @@ def stat_dict(dic, outFp, print_construction=False, thold=False):
         else:
           amount_str += str(amount) + ' + '
         total += amount * same_amount
+        if amount <= 12:
+          lt[amount] = same_amount
         same_amount = 1
         amount = sorted_amount[i]
     total += amount * same_amount
@@ -144,8 +148,10 @@ def stat_dict(dic, outFp, print_construction=False, thold=False):
       amount_str = str(total) + ' (' + amount_str + str(amount) + '×' + str(same_amount) + ')'
     else:
       amount_str = str(total) + ' (' + amount_str + str(amount) + ')'
+    lt[amount] = same_amount
     ls[2] = amount_str
     mode_list.append(ls)
+    dt[mode] = lt
   f = open(outFp, 'wb')
   f.write('*'*32+'\n')
   f.write('1. MODE\n')
@@ -153,6 +159,16 @@ def stat_dict(dic, outFp, print_construction=False, thold=False):
   f.write('mode\tcnum\tinum\n')
   for i in mode_list:
     f.write(i[0]+'\t'+str(i[1])+'\t'+i[2]+'\n')
+  f.write('\n'+'*'*32+'\n')
+  f.write('1+. TABLE\n')
+  f.write('*'*32+'\n')
+  for i in ['12','13','14','23','24','34','123','124','134', '234']:
+    for j in range(2,13):
+      f.write(str(dt[i][j]))
+      if j < 12:
+        f.write('\t')
+      else:
+        f.write('\n')
   if print_construction:
     construction_list = sorted(construction_list,key=lambda x:x[2], reverse=True)
     f.write('\n'+'*'*32+'\n')
@@ -165,20 +181,20 @@ def stat_dict(dic, outFp, print_construction=False, thold=False):
 
 d = extract_construction_by_diff_modes("../lexDic/union/")
 print ('start stat full dict ...')
-f = open('../extracted/json/full_dict','w')
-f.write(json.dumps(d))
-f.close()
-#stat_dict(d, '../extracted/lex/full_result_stat.txt')
+#f = open('../extracted/json/full_dict','w')
+#f.write(json.dumps(d))
+#f.close()
+stat_dict(d, '../extracted/lex/full_result_stat.txt')
 print ('start drop uni slot ...')
 drop_uni_slot_from_bi_slot(d)
 print ('start stat trimmed dict ...')
-f = open('../extracted/json/trimmed_dict','w')
-f.write(json.dumps(d))
-f.close()
-#stat_dict(d, '../extracted/lex/trimmed_result_stat.txt')
+#f = open('../extracted/json/trimmed_dict','w')
+#f.write(json.dumps(d))
+#f.close()
+stat_dict(d, '../extracted/lex/trimmed_result_stat.txt')
 #print ('start stat trimmed dict with threshold ...')
 #stat_dict(d, '../extracted/lex/trimmed_with_threshold_result_stat.txt', print_construction=True, thold=3)
-stat_dict(d, '../extracted/lex/no_basic_word_result_stat.txt')
+#stat_dict(d, '../extracted/lex/no_basic_word_result_stat.txt')
 
 
 
