@@ -109,21 +109,15 @@ def print_dict_to_html(dic, filename):
   f.write('</tbody></table></body></html>')
   f.close()
 
-def stat_dict(dic, outFp, print_construction=False, thold=False):
+def stat_dict(dic, outFp, print_construction=False):
   mode_list = []
   dt = {}
-  if print_construction:
-    construction_list = []
   for mode in dic:
     ls = [mode, 0, []] #ls[1]: construction, ls[2]: instance
     for construction in dic[mode]:
       cnum = len(dic[mode][construction])
-      if thold and cnum < thold:
-        continue
       ls[1] += 1
       ls[2].append(cnum)
-      if print_construction:
-        construction_list.append([mode, construction, cnum])
     sorted_amount = sorted(ls[2],reverse=True)
     amount_str = ''
     same_amount = 1
@@ -170,13 +164,16 @@ def stat_dict(dic, outFp, print_construction=False, thold=False):
       else:
         f.write('\n')
   if print_construction:
-    construction_list = sorted(construction_list,key=lambda x:x[2], reverse=True)
     f.write('\n'+'*'*32+'\n')
     f.write('2. CONSTRUCTION\n')
     f.write('*'*32+'\n')
-    f.write('mode\tcform\t\tinum\n')
-    for i in construction_list:
-      f.write(i[0]+'\t'+i[1].encode('utf-8')+'\t'+str(i[2])+'\n')
+    for mode in dic:
+      f.write('='*8+' '+mode+' '+'='*8+'\n')
+      sd = sorted(dic[mode].iteritems(),key=lambda x:len(x[1]),reverse=True)
+      for p in sd:
+        f.write(p[0].encode('utf-8')+'\t')#construction
+        f.write(str(len(p[1]))+'\t')
+        f.write(','.join(p[1]).encode('utf-8')+'\n')#instances
   f.close()
 
 d = extract_construction_by_diff_modes("../lexDic/union/")
@@ -184,14 +181,14 @@ print ('start stat full dict ...')
 #f = open('../extracted/json/full_dict','w')
 #f.write(json.dumps(d))
 #f.close()
-stat_dict(d, '../extracted/lex/full_result_stat.txt')
+stat_dict(d, '../extracted/lex/full_result_stat.txt',True)
 print ('start drop uni slot ...')
 drop_uni_slot_from_bi_slot(d)
 print ('start stat trimmed dict ...')
 #f = open('../extracted/json/trimmed_dict','w')
 #f.write(json.dumps(d))
 #f.close()
-stat_dict(d, '../extracted/lex/trimmed_result_stat.txt')
+stat_dict(d, '../extracted/lex/trimmed_result_stat.txt',True)
 #print ('start stat trimmed dict with threshold ...')
 #stat_dict(d, '../extracted/lex/trimmed_with_threshold_result_stat.txt', print_construction=True, thold=3)
 #stat_dict(d, '../extracted/lex/no_basic_word_result_stat.txt')
