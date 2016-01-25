@@ -26,10 +26,10 @@ for p in s:
         former = p[0]
 collectTrans()
 
-f = open('../extracted/transformation.txt', 'ab')
+f = open('../extracted/transformation.txt', 'wb')
 
 print 'output 数字 ...'
-#f.write('***********数字：***********\n')
+f.write('***********数字：***********\n')
 NUMBERS = [
     '一'.decode('utf-8'),
     '二'.decode('utf-8'),
@@ -47,18 +47,18 @@ for i in range(len(trans)):
         continue
     count = 0
     if trans[i][0][0] == '第'.decode('utf-8') and trans[i][0][1] in NUMBERS:
-        #f.write(', '.join(trans[i]).encode('utf-8')+'\n')
+        f.write(', '.join(trans[i]).encode('utf-8')+'\n')
         trans[i] = []
         continue
     for j in range(4):
         if trans[i][0][j] == '十'.decode('utf-8'):
             if (j > 0 and trans[i][0][j-1] in NUMBERS) or (j < 3 and trans[i][0][j+1] in NUMBERS):
-                #f.write(', '.join(trans[i]).encode('utf-8')+'\n')
+                f.write(', '.join(trans[i]).encode('utf-8')+'\n')
                 trans[i] = []
                 break
 
 print 'output 前后二字交换 ...'
-#f.write('***********前后二字交换：***********\n')
+f.write('***********前后二字交换：***********\n')
 for i in range(len(trans)):
     if not trans[i] or len(trans[i]) > 2:
         continue
@@ -66,15 +66,13 @@ for i in range(len(trans)):
     sec = trans[i][1]
     if fir[:2] == sec[2:] and fir[2:] == sec[:2]:
         trans[i] = []
-        '''
         f.write(fir.encode('utf-8'))
         f.write(', ')
         f.write(sec.encode('utf-8'))
         f.write('\n')
-        '''
 
 print 'output 一三不变，二四交换 ...'
-#f.write('***********一三不变，二四交换：***********\n')
+f.write('***********一三不变，二四交换：***********\n')
 for i in range(len(trans)):
     if not trans[i] or len(trans[i]) > 2:
         continue
@@ -82,15 +80,13 @@ for i in range(len(trans)):
     sec = trans[i][1]
     if fir[0] == sec[0] and fir[1] == sec[3] and fir[3] == sec[1]:
         trans[i] = []
-        '''
         f.write(fir.encode('utf-8'))
         f.write(', ')
         f.write(sec.encode('utf-8'))
         f.write('\n')
-        '''
 
 print 'output 二四不变，一三交换 ...'
-#f.write('***********二四不变，一三交换：***********\n')
+f.write('***********二四不变，一三交换：***********\n')
 for i in range(len(trans)):
     if not trans[i] or len(trans[i]) > 2:
         continue
@@ -98,15 +94,13 @@ for i in range(len(trans)):
     sec = trans[i][1]
     if fir[1] == sec[1] and fir[0] == sec[2] and fir[2] == sec[0]:
         trans[i] = []
-        '''
         f.write(fir.encode('utf-8'))
         f.write(', ')
         f.write(sec.encode('utf-8'))
         f.write('\n')
-        '''
 
 print 'output 一二不变，三四交换 ...'
-#f.write('***********一二不变，三四交换：***********\n')
+f.write('***********一二不变，三四交换：***********\n')
 for i in range(len(trans)):
     if not trans[i] or len(trans[i]) > 2:
         continue
@@ -114,15 +108,13 @@ for i in range(len(trans)):
     sec = trans[i][1]
     if fir[1] == sec[1] and fir[3] == sec[2] and fir[2] == sec[3]:
         trans[i] = []
-        '''
         f.write(fir.encode('utf-8'))
         f.write(', ')
         f.write(sec.encode('utf-8'))
         f.write('\n')
-        '''
 
 print 'output 三四不变，一二交换 ...'
-#f.write('***********三四不变，一二交换：***********\n')
+f.write('***********三四不变，一二交换：***********\n')
 for i in range(len(trans)):
     if not trans[i] or len(trans[i]) > 2:
         continue
@@ -130,15 +122,13 @@ for i in range(len(trans)):
     sec = trans[i][1]
     if fir[2] == sec[2] and fir[0] == sec[1] and fir[1] == sec[0]:
         trans[i] = []
-        '''
         f.write(fir.encode('utf-8'))
         f.write(', ')
         f.write(sec.encode('utf-8'))
         f.write('\n')
-        '''
 
 print 'output 一二交换，三四交换 ...'
-#f.write('***********一二交换，三四交换：***********\n')
+f.write('***********一二交换，三四交换：***********\n')
 for i in range(len(trans)):
     if not trans[i] or len(trans[i]) > 2:
         continue
@@ -146,15 +136,13 @@ for i in range(len(trans)):
     sec = trans[i][1]
     if fir[3] == sec[2] and fir[0] == sec[1] and fir[1] == sec[0]:
         trans[i] = []
-        '''
         f.write(fir.encode('utf-8'))
         f.write(', ')
         f.write(sec.encode('utf-8'))
         f.write('\n')
-        '''
 
 print 'output 一四交换，二三不变 ...'
-#f.write('***********一二交换，三四交换：***********\n')
+f.write('***********一二交换，三四交换：***********\n')
 for i in range(len(trans)):
     if not trans[i] or len(trans[i]) > 2:
         continue
@@ -162,15 +150,13 @@ for i in range(len(trans)):
     sec = trans[i][1]
     if fir[3] == sec[0] and fir[1] == sec[1] and fir[2] == sec[2]:
         trans[i] = []
-        '''
         f.write(fir.encode('utf-8'))
         f.write(', ')
         f.write(sec.encode('utf-8'))
         f.write('\n')
-        '''
 
 print 'output 一四不变，二三交换 ...'
-#f.write('***********一四不变，二三交换：***********\n')
+f.write('***********一四不变，二三交换：***********\n')
 for i in range(len(trans)):
     if not trans[i] or len(trans[i]) > 2:
         continue
@@ -178,12 +164,10 @@ for i in range(len(trans)):
     sec = trans[i][1]
     if fir[3] == sec[3] and fir[1] == sec[2] and fir[2] == sec[1]:
         trans[i] = []
-        '''
         f.write(fir.encode('utf-8'))
         f.write(', ')
         f.write(sec.encode('utf-8'))
         f.write('\n')
-        '''
 
 print 'output 全部逆序 ...'
 f.write('***********全部逆序：***********\n')
