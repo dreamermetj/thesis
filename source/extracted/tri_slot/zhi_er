@@ -1,0 +1,954 @@
+之2：271，之3：3939，而2：265，而3：594
+之2:
+	PRETAG:
+		150	v
+		79	n
+		22	a
+		9	p
+		4	m
+		3	d
+		2	b
+		2	t
+	POSTTAG:
+		44	n
+		34	vn
+		26	dv
+		19	v
+		18	a
+		14	pn
+		10	vv
+		9	nn
+		8	na
+		7	an
+		7	da
+		6	cv
+		6	mq
+		6	z
+		5	cn
+		4	vf
+		4	vr
+		4	mv
+		2	aa
+		2	va
+		2	vc
+		2	pv
+		2	nf
+		2	pa
+		2	rn
+		2	d
+		2	qn
+		1	vd
+		1	rr
+		1	vp
+		1	vq
+		1	ar
+		1	rv
+		1	nk
+		1	ty
+		1	pb
+		1	ra
+		1	rc
+		1	nv
+		1	dn
+		1	fv
+		1	dd
+		1	dt
+		1	fn
+		1	c
+		1	mm
+		1	uv
+		1	s
+		1	ud
+	FULLTAG:
+		22	v vn
+		21	v n
+		19	v dv
+		11	v pn
+		8	v v
+		6	v vv
+		5	v a
+		4	v cn
+		4	v cv
+		4	v nn
+		4	v vf
+		3	v an
+		3	v mv
+		2	v rn
+		2	v nf
+		2	v na
+		2	v aa
+		2	v da
+		2	v vr
+		2	v va
+		2	v vc
+		2	v mq
+		2	v z
+		1	v rv
+		1	v ra
+		1	v rc
+		1	v fn
+		1	v qn
+		1	v fv
+		1	v pv
+		1	v dd
+		1	v dn
+		1	v dt
+		1	v vp
+		1	v d
+		1	v c
+		1	v s
+		1	v ud
+		1	v ty
+		1	t na
+		1	t vd
+		2	p v
+		2	p a
+		2	p cv
+		1	p mv
+		1	p vn
+		1	p da
+		20	n n
+		11	n a
+		7	n v
+		7	n vn
+		5	n nn
+		4	n z
+		4	n an
+		4	n dv
+		3	n pn
+		3	n vv
+		2	n pa
+		2	n mq
+		1	n d
+		1	n nv
+		1	n na
+		1	n ar
+		1	n vq
+		1	n vr
+		1	n qn
+		1	m dv
+		1	m mm
+		1	m vv
+		1	m pv
+		1	d pb
+		1	d da
+		1	d rr
+		1	b mq
+		1	b n
+		4	a na
+		4	a vn
+		3	a da
+		2	a n
+		2	a v
+		2	a dv
+		1	a uv
+		1	a mq
+		1	a nk
+		1	a vr
+		1	a cn
+之3:
+	PRETAG:
+		1299	n
+		463	nn
+		375	vn
+		289	v
+		146	a
+		106	an
+		99	dv
+		99	nv
+		95	vv
+		93	mn
+		80	mq
+		56	nf
+		40	t
+		40	bn
+		38	dn
+		38	z
+		37	mv
+		35	va
+		28	na
+		24	vq
+		23	d
+		22	pn
+		22	nq
+		21	av
+		18	da
+		18	ma
+		17	aa
+		16	b
+		16	fn
+		15	m
+		12	qn
+		12	fv
+		11	vb
+		11	nb
+		10	tn
+		9	vd
+		8	bv
+		8	pv
+		8	vf
+		8	nd
+		7	dd
+		7	dq
+		7	s
+		6	qf
+		6	vk
+		6	vm
+		5	dp
+		5	qv
+		5	f
+		5	rv
+		5	bb
+		5	cn
+		5	vt
+		5	nm
+		4	tt
+		4	rn
+		4	cv
+		4	mm
+		4	ad
+		4	am
+		3	pa
+		3	mt
+		3	r
+		3	np
+		2	dr
+		2	qa
+		2	qb
+		2	ba
+		2	mr
+		2	pt
+		2	pf
+		2	pm
+		2	aq
+		2	mp
+		2	ay
+		2	nt
+		2	fa
+		1	Rv
+		1	Rd
+		1	yq
+		1	gn
+		1	tv
+		1	un
+		1	ta
+		1	dm
+		1	db
+		1	dy
+		1	qq
+		1	qm
+		1	rd
+		1	bd
+		1	bq
+		1	on
+		1	g
+		1	ov
+		1	cc
+		1	ac
+		1	ab
+		1	pr
+		1	pq
+		1	mb
+		1	uv
+		1	vc
+		1	ak
+		1	vp
+		1	at
+		1	vy
+		1	ap
+		1	nc
+		1	nr
+	POSTTAG:
+		2179	n
+		1074	v
+		306	a
+		106	f
+		81	q
+		70	d
+		53	m
+		24	b
+		22	t
+		15	p
+		4	r
+		4	u
+		1	y
+	FULLTAG:
+		1	rd y
+		315	n v
+		168	nn v
+		116	vn v
+		61	v v
+		36	a v
+		35	dv v
+		30	nv v
+		28	mq v
+		23	an v
+		21	vv v
+		19	mn v
+		17	bn v
+		12	va v
+		12	nq v
+		12	dn v
+		11	na v
+		10	mv v
+		10	nf v
+		9	av v
+		9	d v
+		9	fn v
+		8	t v
+		7	z v
+		7	pn v
+		6	vq v
+		5	fv v
+		5	aa v
+		5	vb v
+		4	dq v
+		4	vf v
+		4	ma v
+		4	vd v
+		3	nd v
+		3	bv v
+		3	s v
+		3	da v
+		3	nb v
+		2	rn v
+		2	mp v
+		2	m v
+		2	dp v
+		2	qn v
+		2	b v
+		1	tn v
+		1	vm v
+		1	np v
+		1	cn v
+		1	nr v
+		1	pv v
+		1	nm v
+		1	mr v
+		1	ab v
+		1	nc v
+		1	dr v
+		1	qv v
+		1	am v
+		1	mm v
+		1	rv v
+		1	pq v
+		1	qb v
+		1	qf v
+		1	f v
+		1	pt v
+		1	mt v
+		1	yq v
+		1	vt v
+		1	gn v
+		1	pf v
+		1	nn u
+		1	av u
+		1	an u
+		1	vn u
+		6	n t
+		3	mn t
+		2	dv t
+		2	vn t
+		1	t t
+		1	nn t
+		1	nt t
+		1	mv t
+		1	rv t
+		1	ma t
+		1	an t
+		1	mq t
+		1	vt t
+		1	fv r
+		1	dv r
+		1	vc r
+		1	vv r
+		32	n q
+		8	vn q
+		7	nn q
+		7	v q
+		3	a q
+		2	cv q
+		2	dv q
+		2	an q
+		2	vv q
+		2	mn q
+		1	t q
+		1	pn q
+		1	z q
+		1	pv q
+		1	qa q
+		1	mv q
+		1	qv q
+		1	nf q
+		1	m q
+		1	dq q
+		1	at q
+		1	ba q
+		1	nv q
+		1	da q
+		7	n p
+		3	vn p
+		1	v p
+		1	an p
+		1	nf p
+		1	vb p
+		1	mn p
+		734	n n
+		224	nn n
+		199	v n
+		197	vn n
+		102	a n
+		60	an n
+		57	nv n
+		56	vv n
+		53	dv n
+		47	mn n
+		38	nf n
+		31	mq n
+		25	z n
+		23	dn n
+		20	va n
+		19	bn n
+		16	vq n
+		16	na n
+		15	mv n
+		13	t n
+		12	da n
+		11	aa n
+		10	av n
+		10	b n
+		8	tn n
+		8	d n
+		8	ma n
+		8	qn n
+		7	dd n
+		7	nb n
+		7	pn n
+		7	fn n
+		6	nq n
+		6	vk n
+		5	fv n
+		5	vm n
+		4	nm n
+		4	vf n
+		4	cn n
+		4	nd n
+		4	ad n
+		4	tt n
+		4	vd n
+		4	vb n
+		4	qf n
+		3	bv n
+		3	pv n
+		3	s n
+		3	qv n
+		3	pa n
+		3	bb n
+		3	m n
+		3	vt n
+		3	dp n
+		2	r n
+		2	pm n
+		2	np n
+		2	rn n
+		2	fa n
+		2	am n
+		2	rv n
+		2	dq n
+		2	mt n
+		1	un n
+		1	Rv n
+		1	bq n
+		1	bd n
+		1	ap n
+		1	ak n
+		1	g n
+		1	aq n
+		1	on n
+		1	dy n
+		1	qq n
+		1	ta n
+		1	ov n
+		1	cv n
+		1	vp n
+		1	dr n
+		1	ac n
+		1	cc n
+		1	nt n
+		1	qb n
+		1	qa n
+		1	Rd n
+		1	mm n
+		1	vy n
+		1	qm n
+		1	f n
+		1	ay n
+		1	uv n
+		38	n m
+		4	t m
+		2	nn m
+		2	m m
+		2	d m
+		2	vv m
+		1	z m
+		1	mq m
+		1	v m
+		36	n f
+		16	nn f
+		10	v f
+		6	vv f
+		5	t f
+		4	vn f
+		4	mn f
+		3	d f
+		3	mq f
+		2	mv f
+		2	b f
+		2	ma f
+		1	r f
+		1	ay f
+		1	m f
+		1	pr f
+		1	an f
+		1	nq f
+		1	dv f
+		1	bn f
+		1	bb f
+		1	db f
+		1	nv f
+		1	mb f
+		1	dn f
+		25	n d
+		9	vn d
+		6	nn d
+		4	an d
+		3	mq d
+		3	mn d
+		2	nv d
+		2	nf d
+		2	pn d
+		2	da d
+		2	dn d
+		1	va d
+		1	a d
+		1	fv d
+		1	vd d
+		1	dv d
+		1	bb d
+		1	d d
+		1	m d
+		1	bv d
+		1	vv d
+		4	n b
+		4	vn b
+		2	nn b
+		2	mq b
+		2	pn b
+		1	am b
+		1	pv b
+		1	cv b
+		1	qn b
+		1	tv b
+		1	f b
+		1	m b
+		1	ba b
+		1	ma b
+		1	v b
+		102	n a
+		36	nn a
+		31	vn a
+		14	mn a
+		13	an a
+		11	mq a
+		9	v a
+		8	t a
+		8	mv a
+		8	nv a
+		6	vv a
+		4	m a
+		4	dv a
+		4	nf a
+		4	z a
+		4	a a
+		3	bn a
+		3	nq a
+		3	pn a
+		2	va a
+		2	pv a
+		2	vq a
+		2	mm a
+		2	ma a
+		2	f a
+		2	b a
+		1	aa a
+		1	dm a
+		1	bv a
+		1	mr a
+		1	aq a
+		1	nb a
+		1	nd a
+		1	pt a
+		1	s a
+		1	rv a
+		1	av a
+		1	tn a
+		1	vb a
+		1	na a
+		1	qf a
+		1	qn a
+		1	pf a
+而2:
+	PRETAG:
+		137	v
+		57	a
+		48	n
+		7	d
+		5	b
+		5	p
+		2	c
+		2	m
+		2	t
+	POSTTAG:
+		69	dv
+		32	vr
+		26	vn
+		20	da
+		19	vv
+		18	dn
+		14	n
+		11	v
+		5	va
+		4	av
+		4	fv
+		4	a
+		3	an
+		3	fr
+		3	z
+		2	aa
+		2	ar
+		2	at
+		2	nq
+		2	dd
+		2	fd
+		1	vd
+		1	vk
+		1	vy
+		1	cv
+		1	pr
+		1	rr
+		1	fn
+		1	nr
+		1	nv
+		1	pm
+		1	mr
+		1	db
+		1	dc
+		1	dr
+		1	dp
+		1	dq
+		1	c
+		1	p
+	FULLTAG:
+		44	v dv
+		20	v vr
+		13	v vn
+		9	v vv
+		7	v v
+		5	v dn
+		5	v da
+		4	v n
+		3	v fr
+		2	v fd
+		2	v nq
+		2	v fv
+		2	v va
+		2	v an
+		2	v z
+		1	v dc
+		1	v dd
+		1	v nr
+		1	v vy
+		1	v c
+		1	v p
+		1	v mr
+		1	v nv
+		1	v av
+		1	v pm
+		1	v pr
+		1	v cv
+		1	v rr
+		1	v dq
+		1	v ar
+		1	t vn
+		1	t vv
+		2	p dv
+		1	p vr
+		1	p a
+		1	p dn
+		9	n dv
+		7	n dn
+		6	n da
+		5	n vn
+		4	n vv
+		3	n vr
+		3	n n
+		2	n v
+		2	n va
+		1	n ar
+		1	n dd
+		1	n vk
+		1	n z
+		1	n at
+		1	n dp
+		1	n db
+		1	m dv
+		1	m dn
+		3	d dv
+		2	d vr
+		1	d n
+		1	d dn
+		1	c dv
+		1	c a
+		2	b da
+		1	b vr
+		1	b v
+		1	b aa
+		9	a dv
+		7	a vn
+		7	a da
+		6	a n
+		5	a vr
+		5	a vv
+		3	a av
+		3	a dn
+		2	a a
+		2	a fv
+		1	a fn
+		1	a vd
+		1	a at
+		1	a v
+		1	a an
+		1	a aa
+		1	a va
+		1	a dr
+而3:
+	PRETAG:
+		140	vn
+		59	v
+		44	n
+		34	nn
+		29	dv
+		27	vv
+		25	d
+		22	pn
+		22	mv
+		20	va
+		16	nv
+		14	an
+		12	mn
+		10	dn
+		10	da
+		10	z
+		8	nr
+		6	a
+		5	av
+		5	dq
+		4	cn
+		4	pv
+		4	pf
+		4	dm
+		3	vd
+		3	vm
+		3	na
+		3	dd
+		3	qn
+		2	vb
+		2	vq
+		2	vr
+		2	cv
+		2	pr
+		2	pa
+		2	t
+		2	bn
+		2	bv
+		2	mm
+		2	mo
+		2	mq
+		1	aa
+		1	cb
+		1	am
+		1	au
+		1	bd
+		1	pq
+		1	tt
+		1	nd
+		1	nq
+		1	db
+		1	dy
+		1	r
+		1	dr
+		1	nu
+		1	m
+		1	pt
+		1	o
+		1	mp
+		1	vt
+		1	pm
+		1	my
+	POSTTAG:
+		420	v
+		64	n
+		31	a
+		23	f
+		22	d
+		18	p
+		8	b
+		5	m
+		2	r
+		1	y
+	FULLTAG:
+		1	dy y
+		110	vn v
+		46	v v
+		28	n v
+		21	nn v
+		21	vv v
+		19	dv v
+		18	d v
+		17	mv v
+		14	va v
+		12	an v
+		11	pn v
+		10	nv v
+		10	z v
+		8	dn v
+		7	nr v
+		7	mn v
+		5	av v
+		4	cn v
+		4	pv v
+		4	da v
+		3	dq v
+		3	vm v
+		3	qn v
+		2	mq v
+		2	mo v
+		2	a v
+		2	dd v
+		2	pa v
+		2	vq v
+		2	vd v
+		2	na v
+		2	vr v
+		1	dm v
+		1	bv v
+		1	pr v
+		1	bn v
+		1	cv v
+		1	mm v
+		1	o v
+		1	pq v
+		1	m v
+		1	tt v
+		1	bd v
+		1	vb v
+		1	nq v
+		1	vt v
+		1	nu v
+		1	cb v
+		1	pf v
+		1	n r
+		1	dq r
+		4	v p
+		2	n p
+		2	d p
+		2	vn p
+		1	nd p
+		1	va p
+		1	a p
+		1	dd p
+		1	dv p
+		1	mn p
+		1	pn p
+		1	dq p
+		22	vn n
+		5	nn n
+		5	n n
+		4	d n
+		4	nv n
+		3	v n
+		3	dv n
+		3	pn n
+		3	da n
+		2	va n
+		1	aa n
+		1	mv n
+		1	mm n
+		1	db n
+		1	nr n
+		1	an n
+		1	na n
+		1	bv n
+		1	vv n
+		1	au n
+		1	nn m
+		1	dm m
+		1	n m
+		1	v m
+		1	mn m
+		4	n f
+		3	pf f
+		2	nn f
+		2	va f
+		2	mv f
+		2	pn f
+		1	t f
+		1	pr f
+		1	nv f
+		1	pt f
+		1	mn f
+		1	vv f
+		1	v f
+		1	vn f
+		3	v d
+		2	nn d
+		2	dv d
+		2	dn d
+		1	r d
+		1	va d
+		1	pm d
+		1	n d
+		1	my d
+		1	cv d
+		1	vv d
+		1	mv d
+		1	dr d
+		1	vb d
+		1	mn d
+		1	da d
+		1	vn d
+		2	pn b
+		1	dv b
+		1	nv b
+		1	an b
+		1	vv b
+		1	vn b
+		1	v b
+		3	nn a
+		3	a a
+		3	dv a
+		3	pn a
+		3	vn a
+		2	vv a
+		2	dm a
+		2	n a
+		2	da a
+		1	t a
+		1	mv a
+		1	am a
+		1	bn a
+		1	mp a
+		1	d a
+		1	vd a
+		1	mn a

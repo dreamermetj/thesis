@@ -22,4 +22,3 @@ for p in s:
     f.write(p[0].encode('utf-8')+'\t'+str(p[1])+'\n')
 f.close()
 
-

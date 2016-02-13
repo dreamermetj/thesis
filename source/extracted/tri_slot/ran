@@ -1,0 +1,241 @@
+然2：402，然4：124
+然2:
+	PRETAG:
+		113	n
+		106	v
+		87	a
+		53	p
+		14	d
+		10	b
+		8	y
+		6	q
+		2	o
+		1	c
+		1	e
+		1	r
+	POSTTAG:
+		86	v
+		56	n
+		28	a
+		27	cv
+		24	pv
+		21	vn
+		14	vv
+		14	dv
+		12	nv
+		10	nf
+		10	dn
+		8	pn
+		8	rn
+		7	av
+		6	pa
+		6	da
+		5	vm
+		5	nn
+		5	mn
+		5	mv
+		4	va
+		4	an
+		4	vr
+		3	cr
+		3	rv
+		3	d
+		3	z
+		2	cn
+		2	nr
+		2	r
+		2	ma
+		2	qv
+		2	mq
+		1	ak
+		1	vp
+		1	vq
+		1	vt
+		1	cd
+		1	un
+		1	pf
+		1	bn
+		1	db
+	FULLTAG:
+		2	y pn
+		1	y a
+		1	y v
+		1	y da
+		1	y pv
+		1	y pf
+		1	y vv
+		21	v v
+		14	v n
+		8	v pv
+		8	v vn
+		6	v dv
+		6	v vv
+		5	v a
+		4	v cv
+		4	v av
+		3	v pa
+		3	v nf
+		3	v mn
+		2	v rn
+		2	v nv
+		2	v an
+		2	v cr
+		2	v vm
+		2	v z
+		1	v mv
+		1	v cn
+		1	v rv
+		1	v db
+		1	v da
+		1	v dn
+		1	v nn
+		1	v va
+		1	v qv
+		1	r n
+		2	q v
+		1	q cv
+		1	q vt
+		1	q vn
+		1	q pn
+		21	p n
+		15	p v
+		4	p a
+		4	p rn
+		2	p rv
+		2	p vn
+		1	p nv
+		1	p cr
+		1	p bn
+		1	p mn
+		1	p da
+		1	o cv
+		1	o nv
+		21	n v
+		13	n cv
+		10	n n
+		9	n a
+		7	n vn
+		6	n nv
+		6	n nf
+		5	n pv
+		4	n dv
+		4	n vv
+		3	n vm
+		3	n mv
+		2	n d
+		2	n vr
+		2	n av
+		2	n an
+		2	n va
+		2	n da
+		1	n pa
+		1	n cd
+		1	n cn
+		1	n z
+		1	n r
+		1	n nn
+		1	n vp
+		1	n vq
+		1	n mq
+		1	n dn
+		1	e dn
+		6	d v
+		4	d n
+		2	d dn
+		1	d un
+		1	d pn
+		1	c r
+		2	b pv
+		1	b pn
+		1	b cv
+		1	b nr
+		1	b nn
+		1	b vr
+		1	b a
+		1	b n
+		1	b mv
+		20	a v
+		8	a a
+		8	a pv
+		7	a cv
+		5	a n
+		5	a dn
+		4	a dv
+		3	a vv
+		3	a vn
+		3	a pn
+		2	a ma
+		2	a rn
+		2	a nv
+		2	a nn
+		2	a pa
+		1	a ak
+		1	a mn
+		1	a d
+		1	a nf
+		1	a da
+		1	a nr
+		1	a mq
+		1	a qv
+		1	a av
+		1	a vr
+		1	a va
+然4:
+	PRETAG:
+		23	nn
+		11	nv
+		8	na
+		7	nnn
+		4	nuv
+		4	vp
+		3	vd
+		3	nun
+		3	np
+		3	vrp
+		2	nud
+		2	nua
+		2	pv
+		2	nd
+		2	nnv
+		2	dv
+		2	vva
+		2	mvy
+		1	and
+		1	mqd
+		1	vn
+		1	cd
+		1	ap
+		1	vnd
+		1	pvd
+		1	nny
+		1	nvn
+		1	mqy
+		1	pra
+		1	aud
+		1	no
+		1	ddr
+		1	nb
+		1	pc
+		1	bnn
+		1	dqc
+		1	dda
+		1	pvn
+		1	non
+		1	aad
+		1	ncp
+		1	vnn
+		1	dd
+		1	vvn
+		1	nvd
+		1	nva
+		1	vrd
+		1	vcd
+		1	vvd
+		1	npr
+		1	dpv
+		1	crv
+		1	nfv
+		1	sn
+		1	sa
+		1	ndr
+		1	ndv
