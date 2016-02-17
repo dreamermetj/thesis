@@ -1,5 +1,5 @@
 #coding:utf-8
-f=open('../lexDic/union/1234')
+f=open('../lexDic/93050/union/1234')
 t=f.read().strip().decode('utf-8').split('\n')
 f.close()
 d=dict()
@@ -14,11 +14,14 @@ def signify(a):
             if max(a[i],a[j]) > min(a[i],a[j])*10:
                 return True
     return False
-f=open('../extracted/tri_slot/full_result.py','wb')
-s = sorted(d.iteritems(),key=lambda x:sum(x[1]),reverse=True)
+
+f=open('../extracted/tri_slot/explicit_result.py','wb')
+s = []
+for i in d:
+    for j in range(4):
+        s.append([i.encode('utf-8')+str(j+1),d[i][j]])
+s = sorted(s,key=lambda x:x[1],reverse=True)
 for p in s:
-    if not signify(p[1]):
-        f.write('#')
-    f.write(p[0].encode('utf-8')+'\t'+str(p[1])+'\n')
+    f.write(p[0]+'\t'+str(p[1])+'\n')
 f.close()
 

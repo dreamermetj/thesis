@@ -1,9 +1,9 @@
 #coding:utf-8
 import json
-f=open('../extracted/tri_slot/full_result.py')
+f=open('../extracted/tri_slot/explicit_result.py')
 t=f.read().decode("utf-8").split('\n')
 f.close()
-f=open('../extracted/json/full_dict')
+f=open('../lexDic/93050/extracted/json/full_dict')
 d=json.loads(f.read())
 f.close()
 rev = dict()
@@ -15,8 +15,8 @@ for mode in d:
         rev[instance] = [[construction, l]]
       else:
         rev[instance].append([construction, l])
-f=open('../extracted/tri_slot/trimmed_result_10.py','wb')
 count = 0
+s = []
 def isDel(arr):
   s = sorted(arr)
   if s[3] > 10 * s[1]:
@@ -24,23 +24,23 @@ def isDel(arr):
   return True
 for w in t:
   count += 1
-  if count > 300:
+  if count > 100:
     break
-  if w[0] == '#':
-    continue
-  l = [0,0,0,0]
-  for i in range(4):
-    for ins in rev:
-      if ins[i] != w[0]:
-        continue
-      ist = True
-      for pair in rev[ins]:
-        if pair[1] > 10:
-          ist = False
-          break
-      if ist:
-        l[i] += 1
-  if isDel(l):
-    f.write('#')
-  f.write(w[:2].encode('utf-8')+str(l)+'\n')
+  l = 0
+  idx = int(w[1]) - 1
+  for ins in rev:
+    if ins[idx] != w[0]:
+      continue
+    ist = True
+    for pair in rev[ins]:
+      if pair[1] > 10:
+        ist = False
+        break
+    if ist:
+      l += 1
+  s.append([w,l])
+s=sorted(s,key=lambda x:x[1],reverse=True)
+f=open('../extracted/tri_slot/trimmed_result_10.py','wb')
+for p in s:
+  f.write(p[0].encode('utf-8')+'\t'+str(p[1])+'\n')
 f.close()
