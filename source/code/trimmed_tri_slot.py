@@ -33,14 +33,14 @@ for w in t:
       continue
     ist = True
     for pair in rev[ins]:
-      if pair[1] > 10:
+      if pair[1] > 5:
         ist = False
         break
     if ist:
       l += 1
   s.append([w,l])
 s=sorted(s,key=lambda x:x[1],reverse=True)
-f=open('../extracted/tri_slot/trimmed_result_10.py','wb')
+f=open('../extracted/tri_slot/trimmed_result_5.py','wb')
 for p in s:
   f.write(p[0].encode('utf-8')+'\t'+str(p[1])+'\n')
 f.close()

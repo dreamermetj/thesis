@@ -1,6 +1,6 @@
 #coding:utf-8
 import json
-f=open('../extracted/json/full_dict')
+f=open('../lexDic/93050/extracted/json/full_dict')
 d=json.loads(f.read())
 f.close()
 
@@ -14,7 +14,7 @@ for mode in d:
             else:
                 rev[instance].append([construction, l])
 
-f=open('../lexDic/union/1234')
+f=open('../lexDic/93050/union/1234')
 t=f.read().strip().decode('utf-8').split('\n')
 f.close()
 for w in t:

@@ -1,5 +1,5 @@
 #coding:utf-8
-f=open('../lexDic/93050/union/1234')
+f=open('../extracted/tri_slot/1234_11')
 t=f.read().strip().decode('utf-8').split('\n')
 f.close()
 d=dict()
@@ -15,7 +15,7 @@ def signify(a):
                 return True
     return False
 
-f=open('../extracted/tri_slot/explicit_result.py','wb')
+f=open('../extracted/tri_slot/explicit_result_11.py','wb')
 s = []
 for i in d:
     for j in range(4):
