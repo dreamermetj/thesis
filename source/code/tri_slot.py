@@ -1,11 +1,11 @@
 #coding:utf-8
-f=open('../extracted/tri_slot/1234_11')
+f=open('../extracted/tri_slot/1234_20')
 t=f.read().strip().decode('utf-8').split('\n')
 f.close()
 d=dict()
 for w in t:
     for i in [0,1,2,3]:
-        if not w[i] in d:
+        if w[i] not in d:
             d[w[i]] = [0,0,0,0]
         d[w[i]][i] += 1
 def signify(a):
@@ -15,7 +15,7 @@ def signify(a):
                 return True
     return False
 
-f=open('../extracted/tri_slot/explicit_result_11.py','wb')
+f=open('../extracted/tri_slot/explicit_result_20.py','wb')
 s = []
 for i in d:
     for j in range(4):
