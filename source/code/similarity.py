@@ -22,7 +22,7 @@ for mode in ['123','124','134','234']:
                             simD[pair] = [0 for k in range(ITER)]
                             simD[pair][thes] += 1
 s = sorted(simD.iteritems(),key=lambda x:sum(x[1]),reverse=True)
-f = open('../extracted/similarity/similarity+.txt','wb')
+f = open('../extracted/similarity/similarity++.txt','wb')
 for i in s:
     f.write(i[0].encode('utf-8')+'\t'+str(sum(i[1]))+'\n')
 
