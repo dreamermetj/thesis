@@ -43,3 +43,6 @@ remark:
 
 20160218
 需要古代汉语语料，来研究古时的tri_slot情况。
+
+/ccl_corpus/search?download_serarch_result=%E4%B8%8B%E8%BD%BD&UserMaxHits=0&dir=xiandai&q=%E5%8D%83%2B1%E4%B8%87&LastQuery=%E5%8D%83%2B1%E4%B8%87&num=50&index=FullIndex&outputFormat=TEXT&encoding=UTF-8&orderStyle=score&maxLeftLength=30&maxRightLength=30&scopestr= HTTP/1.1
+
