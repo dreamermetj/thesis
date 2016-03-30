@@ -131,11 +131,9 @@ def sort(ls,outf,sortType):
     f.write(i.encode('utf-8')+'\n')
   f.close()
 
-fn = "../lexDic/union/1234"
+fn = "../lexDic/1234/c30175.pure"
 f = open(fn,'rb')
-ls = f.read().decode('utf-8').split('\n')
-if ls[-1] == '':
-  ls = ls[:-1]
+ls = f.read().strip().decode('utf-8').split('\n')
 for sortType in sortTypes:
-  sort(ls,'../lexDic/union/'+sortType,'c'+sortType)
+  sort(ls,'../lexDic/30175/'+sortType,'c'+sortType)
 f.close()
