@@ -22,6 +22,7 @@ while 1:
 f.close()
 
 for i in diff_pair:
+  print 'start processing ' + str(i) + ' ...'
   f=open('../lexDic/1234/c'+i[0]+'.pure')
   less=set(f.read().strip().decode("utf-8").split('\n'))
   f.close()
