@@ -1,6 +1,6 @@
 #coding:utf-8
 
-f = open('../lexDic/union/1234')
+f = open('../lexDic/1234/c30175.pure')
 t = f.read().decode('utf-8')
 f.close()
 lns = t.strip().split('\n')
