@@ -1,6 +1,6 @@
 #coding:utf-8
 
-diff_pair=[['04635','12601'],['12601','16948'],['17011','17267'],['17267','30175'],['30175','42198'],['30175','42372'],['30175','46238_sogou'],['30175','49218_pangu'],['30175','54058']]
+diff_pair=[['04203','04635'],['04635','12601'],['12601','16948'],['17011','17267'],['17267','30175'],['30175','42198'],['30175','42372'],['30175','46238_sogou'],['30175','49218_pangu'],['30175','54058']]
 #diff_pair=[['04635','12601']]
 import json,re
 
@@ -52,7 +52,7 @@ def writef(f,_list):
 
 from nlpir import *
 VARSIGN = '…'.decode('utf-8')
-out = open('../extracted/expand/auto_diff_10','w')
+out = open('../extracted/expand/auto_diff_5','w')
 for i in diff_pair:
   print 'start processing ' + str(i) + ' ...'
   f=open('../lexDic/1234/c'+i[0]+'.pure')
@@ -82,7 +82,7 @@ for i in diff_pair:
             continue
           if ins in inter:
             proto[1].append(ins)
-        if len(proto[1]) >= 10:
+        if len(proto[1]) >= 5:
           protos.append(proto)
           if len(mode) == 3:
             isUniSlot = True

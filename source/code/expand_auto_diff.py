@@ -1,6 +1,6 @@
 #coding:utf-8
 
-diff_pair=[['04635','12601'],['12601','16948'],['17011','17267'],['17267','30175'],['30175','42198'],['30175','42372'],['30175','46238_sogou'],['30175','49218_pangu'],['30175','54058']]
+diff_pair=[['04203','04635'],['04635','12601'],['12601','16948'],['17011','17267'],['17267','30175'],['30175','42198'],['30175','42372'],['30175','46238_sogou'],['30175','49218_pangu'],['30175','54058']]
 #diff_pair=[['04635','12601']]
 import json,re
 
@@ -82,6 +82,10 @@ for i in diff_pair:
     sw = ''.join(sorted(w))
     if sw in trd: #全变换等级最高，为0
       rsd.append([w,0,trd[sw]])
+      continue
+    temp = ParagraphProcess(w.encode('utf-8'),c_int(1)).strip().split(' ')
+    if len(temp) == 2:
+      rsd.append([w,7])
     else:
       protos = []
       unislot = []
@@ -115,10 +119,6 @@ for i in diff_pair:
         if alterslot: #格式对举等级为3
           rsd.append([w,3,alterslot])
       else:
-        temp = ParagraphProcess(w.encode('utf-8'),c_int(1)).strip().split(' ')
-        if len(temp) == 2:
-          rsd.append([w,7])
-          continue
         temp = re.split(r'[ ]+',ParagraphProcess(' '.join(w).encode('utf-8'),c_int(1)).strip())
         tags = map(lambda x:x.split('/')[1][0],temp)
         if tags[0] == tags[2] and tags[1] == tags[3]:
@@ -127,12 +127,31 @@ for i in diff_pair:
           biw = w[0]+w[2]
           if len(ParagraphProcess(biw.encode('utf-8'),c_int(1)).split('/')) == 2:
             rsd.append([w,5]) #扩展对举等级为5
+            continue
+          biw = w[2]+w[0]
+          if len(ParagraphProcess(biw.encode('utf-8'),c_int(1)).split('/')) == 2:
+            rsd.append([w,5]) #扩展对举等级为5
+            continue
         elif tags[0] == tags[2]:
           biw = w[1]+w[3]
           if len(ParagraphProcess(biw.encode('utf-8'),c_int(1)).split('/')) == 2:
             rsd.append([w,5]) #扩展对举等级为5
+            continue
+          biw = w[3]+w[1]
+          if len(ParagraphProcess(biw.encode('utf-8'),c_int(1)).split('/')) == 2:
+            rsd.append([w,5]) #扩展对举等级为5
+            continue
         else:
-          rsd.append([w,6]) #啥也没有
+          biw1 = w[0]+w[2]
+          biw2 = w[1]+w[3]
+          biw3 = w[2]+w[0]
+          biw4 = w[3]+w[1]
+          if len(ParagraphProcess(biw1.encode('utf-8'),c_int(1)).split('/')) + len(ParagraphProcess(biw2.encode('utf-8'),c_int(1)).split('/')) == 4:
+            rsd.append([w,5]) #扩展对举等级为5
+          elif len(ParagraphProcess(biw3.encode('utf-8'),c_int(1)).split('/')) + len(ParagraphProcess(biw4.encode('utf-8'),c_int(1)).split('/')) == 4:
+            rsd.append([w,5]) #扩展对举等级为5
+          else:
+            rsd.append([w,6]) #啥也没有
   s = sorted(rsd,key=lambda x:x[1])
   count = [0,0,0,0,0,0,0,0]
   for si in s:
