@@ -10,6 +10,8 @@ expand = 0
 for w in t:
   temp = re.split(r'[ ]+',ParagraphProcess(' '.join(w).encode('utf-8'),c_int(1)).strip())
   tags = map(lambda x:x.split('/')[1][0],temp)
+  if not all(map(lambda x:x in ['n','v','a'],tags)):
+    continue
   if tags[0] == tags[2] and tags[1] == tags[3]:
     tag += 1
   elif tags[1] == tags[3]:
